@@ -21,7 +21,7 @@ The project digitises ticket management for a small theatre or institution witho
 - Add and remove movies and showtimes.
 - View all bookings; delete a booking; cancel a whole show, or all bookings for a movie or showtime.
 - List and delete users.
-- Several admin accounts are created on first run by `DatabaseManager`.
+- Several **demo-only** admin accounts are created on first run by `DatabaseManager`.
 
 ## How it works
 
@@ -91,7 +91,7 @@ The program creates `user_credentials.db` in the working directory on first laun
 
 1. Launch the program; it opens on the login page.
 2. Register a customer account, log in, pick a movie and showtime, select seats, then pay in the simulated dialog.
-3. To use the admin panel, sign in with one of the predefined admin accounts created in `DatabaseManager.createPredefinedAdmins` (see the source for the usernames and set your own passwords before using the app for anything real); add movies and showtimes there first if the lists are empty.
+3. To use the admin panel, sign in with one of the predefined admin accounts created in `DatabaseManager.createPredefinedAdmins` (demo accounts only; see the source for the usernames); add movies and showtimes there first if the lists are empty.
 
 ## Tests
 
@@ -99,12 +99,12 @@ There is no test suite. Observed while writing this README: `javac -d <dir> *.ja
 
 ## Status and limitations
 
+- Semester-3 demo application. The predefined admin accounts are hard-coded **for demonstration only**; they are intentionally left as they are, so never use this app with real credentials or data.
 - Working desktop prototype.
 - **Passwords are stored in plain text** in SQLite, and the predefined admin accounts and their passwords are hard-coded in `DatabaseManager.java`. Do not use this for real data.
 - Payment is simulated; no real payment processing.
 - Seat layout and prices are fixed in code (6 rows x 10 seats).
 - The database file name is not listed in `.gitignore`, so a generated `user_credentials.db` could be committed by accident.
-- The older `README.txt` describes classes and paths that do not exist in this repository (for example `BookingPage.java` and a `lib/` folder) and contains a default admin login; this README supersedes it.
 
 ## License
 
